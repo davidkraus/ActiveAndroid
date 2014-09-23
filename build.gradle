@@ -5,6 +5,14 @@ sourceCompatibility = 1.6
 jar.baseName = 'activeandroid'
 archivesBaseName = 'activeandroid'
 
+// Manifest version information!
+def versionMajor = 0
+def versionMinor = 0
+def versionPatch = 1
+
+version = "${versionMajor}.${versionMinor}.${versionPatch}"
+group = "com.activeandroid"
+
 sourceSets {
 	main {
 		java {
@@ -25,3 +33,5 @@ task sourcesJar(type: Jar) {
 artifacts {
     archives sourcesJar
 }
+
+apply from: 'https://bitbucket.org/api/1.0/repositories/dengler/mvn_repo/raw/master/publish.gradle'
